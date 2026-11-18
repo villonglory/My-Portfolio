@@ -402,6 +402,81 @@ nav {
     background-color: var(--orange);
     transform: translateY(-2px);
 }
+.marketing-card {
+    flex-basis: 100%;
+}
+.marketing-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 1.25rem;
+}
+.marketing-gallery img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(11, 31, 58, 0.1);
+    transition: transform 0.3s ease;
+}
+.marketing-gallery img:hover {
+    transform: scale(1.04);
+}
+.project-card a.album-preview {
+    position: relative;
+    display: block;
+    margin: 0 0 1.25rem;
+    padding: 0;
+    background: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(11, 31, 58, 0.12);
+}
+.project-card a.album-preview:hover {
+    background: none;
+    transform: translateY(-2px);
+}
+.album-preview img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.4s ease;
+}
+.album-preview:hover img {
+    transform: scale(1.03);
+}
+.album-preview-label {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 18px;
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 6px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(11, 31, 58, 0.3);
+    transition: background-color 0.3s ease;
+}
+.album-preview:hover .album-preview-label {
+    background-color: var(--orange);
+}
+.service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 1rem;
+    color: var(--blue);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.service-link:hover {
+    color: var(--orange);
+}
 
 /* ===== ABOUT ===== */
 #about {
@@ -819,6 +894,9 @@ footer > * {
     }
     #home h1 {
         font-size: 2rem;
+    }
+    .marketing-gallery {
+        grid-template-columns: repeat(2, 1fr);
     }
     #home p {
         font-size: 1rem;
